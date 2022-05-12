@@ -7,9 +7,12 @@ body {
   background-color: black;
 }
 
+h2 {
+  font-size: 30px;
+}
+
 .slider {
   width: 1100px;
-  /* height: 600px; */
   overflow: hidden;
   border: 10px solid white;
 }
@@ -24,21 +27,18 @@ body {
 .navigation_block {
   position: relative;
   display: flex;
-  /* flex-direction: row; */
   height: 120px;
   margin-top: 20px;
 }
 
 .navigation {
-  /* position: relative; */
   position: absolute;
-  /* margin-left: 13%; */
   right: 0;
-  /* transform: translate(-50px); */
   display: flex;
 }
 
 .text {
+  position: absolute;
   flex-direction: row;
   width: 811px;
   height: 100%;
@@ -46,6 +46,24 @@ body {
   margin-right: 100px;
   color: white;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: none;
+  transition: all .6s ease;
+}
+
+.t1 {
+  top: 85%;
+}
+
+.t2 {
+  top: 85%;
+}
+
+.t3 {
+  top: 85%;
+}
+
+.t4 {
+  top: 85%;
 }
 
 .bar {
@@ -77,19 +95,10 @@ body {
 
 input[name="r"] {
   position: absolute;
-  /* left: 100px; */
   margin: 10px;
   margin-top: 500px;
   visibility: hidden;
 }
-
-.t1, .t2, .t3, .t4 {
-  /* visibility: hidden; */
-}
-
-/* input[name="r"]:checked ~ .to-be-changed {
-  visibility: visible;
-} */
 
 .slides {
   width: 400%;
@@ -108,27 +117,32 @@ input[name="r"] {
 }
 
 #r1:checked ~ .s1 {
-  margin-left: 0;
+  margin-left: 3px;
 }
-#r1:checked ~ .t1 {
-  visibility: visible;
+#r1:checked ~ .t1{
+  transition: all 0.6s ease;
+  display: block;
+
 }
 #r2:checked ~ .s1 {
   margin-left: -25%;
 }
-#r2:checked ~ .t2 {
-  visibility: visible;
+#r2:checked ~  .t2 {
+  transition: all 0.6s ease;
+  display: block;
 }
 #r3:checked ~ .s1 {
   margin-left: -50%;
 }
 #r3:checked ~ .t3 {
-  visibility: visible;
+  transition: all 0.6s ease;
+  display: block;
 }
 #r4:checked ~ .s1 {
   margin-left: -75%;
 }
 #r4:checked ~ .t4 {
-  visibility: visible;
+  transition: all 0.6s ease;
+  display: block;
 }
 
