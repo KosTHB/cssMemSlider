@@ -1,0 +1,290 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: black;
+  overflow-y: hidden;
+}
+h2 {
+  font-size: 3.8vh;
+}
+
+.slider {
+  max-width: 70%;
+  min-width: 70%;
+  min-width: none;
+  overflow: hidden;
+  border: 1vh solid white;
+}
+
+.middle {
+  margin-top: 23.6%;
+  margin-left: 50%;
+  margin-right: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.navigation_block {
+  position: relative;
+  display: flex;
+  height: 8rem;
+  margin-top: 2rem;
+}
+
+.navigation {
+  position: relative;
+  margin-left: 51vw;
+  display: flex;
+}
+
+.text {
+  position: absolute;
+  flex-direction: row;
+  max-width: 37rem;
+  height: 100%;
+  margin-left: 6rem;
+  color: white;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  display: none;
+  transition: all .6s ease;
+  margin-top: 40vw;
+  animation: move 1s ease-in-out;
+}
+
+@keyframes move {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
+
+.bar {
+  height: 3rem;
+  width: 3rem;
+  margin: 0.5vw;
+  cursor: pointer;
+  background-color: rgb(0, 0, 0);
+  border-radius: 50%;
+  transition: all .6s ease;
+}
+
+.bar:hover .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+
+.into {
+  height: 2vh;
+  width: 2vh;
+  margin: 2.6vh;
+  cursor: pointer;
+  background-color: white;
+  opacity: 0.5;
+  border-radius: 50%;
+  transition: all .6s ease;
+}
+
+input[name="r"] {
+  position: absolute;
+  visibility: hidden;
+}
+
+.slides {
+  width: 400%;
+  height: 100%;
+  display: flex;
+}
+
+.slide {
+  width: 25%;
+  transition: all .6s ease;
+}
+
+.slide img{
+  width: 100%;
+  height: 100%;
+}
+
+#r1:checked ~ .s1 {
+  margin-left: 0.5vh;
+}
+#r1:checked ~ .t1{
+  display: block;
+}
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+#r2:checked ~  .t2 {
+  transition: all 2.6s ease;
+  display: block;
+}
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+#r3:checked ~ .t3 {
+  transition: all 2.6s ease;
+  display: block;
+}
+#r4:checked ~ .s1 {
+  margin-left: -75%;
+}
+#r4:checked ~ .t4 {
+  transition: all 2.6s ease;
+  display: block;
+}
+
+@media(max-width: 1280px) {
+  .middle {
+    margin-top: 25.6%;
+  }
+  .text {
+    margin-left: 1rem;
+    max-width: 32rem;
+  }
+}
+
+@media(max-width: 1202px) {
+  .text {
+    margin-left: 1rem;
+    max-width: 30rem;
+  }
+  .navigation {
+    margin-left: 47vw;
+  }
+  .middle {
+    margin-top: 27.6%;
+  }
+}
+
+@media(max-width: 978px) {
+  .text {
+    margin-left: 1rem;
+    max-width: 22rem;
+  }
+  .navigation {
+    margin-left: 42vw;
+  }
+}
+
+@media(max-width: 887px) {
+  .middle {
+    margin-top: 40%;
+  }
+  .navigation_block {
+    height: 23vh;
+  }
+  .text {
+    margin-left: 6%;
+    max-width: 40rem;
+    margin-top: 24rem;
+  }
+  .navigation {
+    margin-top: -2rem;
+    margin-left: 32%;
+  }
+}
+
+@media(max-width: 887px) {
+  .text {
+    margin-top: 24rem;
+    font-size: 4vh;
+  }
+}
+
+@media(max-width: 737px) {
+  .text {
+    margin-top: 20rem;
+    margin-left: 2rem;
+  }
+  .navigation {
+    margin-top: -2rem;
+    margin-left: 22%;
+  }
+}
+
+@media(max-width: 703px) {
+  .middle {
+    margin-top: 40%;
+  }
+  .navigation {
+    margin-left: 25%;
+  }
+  .text {
+    margin-left: 10%;
+  }
+  .navigation_block {
+    height: 30vh;
+  }
+}
+
+@media(max-width: 646px) {
+  .middle {
+    margin-top: 40%;
+  }
+  .navigation {
+    margin-left: 25%;
+  }
+  .text {
+    margin-top: 70%;
+  }
+}
+
+@media(max-width: 596px) {
+  .middle {
+    margin-top: 50%;
+  }
+
+@media(max-width: 490px) {
+  .middle {
+    margin-top: 60%;
+  }
+  .navigation {
+    margin-left: 10%;
+  }
+  .text {
+    margin-left: 6%;
+    margin-top: 15rem;
+    font-size: 4vh;
+  }
+}
+
+@media(max-width: 427px) {
+  .text {
+    margin-top: 13rem;
+    font-size: 3vh;
+  }
+}
+
+@media(max-width: 344px) {
+  .middle {
+    margin-top: 80%;
+  }
+  .navigation {
+    margin-left: 5%;
+  }
+  .text {
+    margin-left: 10%;
+    margin-top: 11rem;
+  }
+}
+
+
+@media(max-width: 320px) {
+  .middle {
+    margin-top: 80%;
+  }
+  .navigation {
+    margin-left: 0%;
+  }
+  .text {
+    width: 11rem;
+    margin-left: 10%;
+    margin-top: 11rem;
+    font-size: 1rem;
+  }
+}
+
