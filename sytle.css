@@ -82,7 +82,6 @@ h2 {
   opacity: 0.5;
   border-radius: 50%;
   transition: all .6s ease;
-  /* height: 2vh; */
 }
 
 input[name="r"] {
@@ -105,31 +104,50 @@ input[name="r"] {
   width: 100%;
   height: 100%;
 }
-
-#r1:checked ~ .s1 {
+#r1:checked~.navigation_block>.navigation>label[for="r1"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+#r2:checked~.navigation_block>.navigation>label[for="r2"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+#r3:checked~.navigation_block>.navigation>label[for="r3"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+#r4:checked~.navigation_block>.navigation>label[for="r4"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+#r1:checked ~ .slides>.s1 {
   margin-left: 0.5vh;
 }
-#r1:checked ~ .t1{
-  display: block;
-}
-#r2:checked ~ .s1 {
+#r2:checked ~ .slides>.s1 {
   margin-left: -25%;
 }
-#r2:checked ~  .t2 {
+#r1:checked ~ .slides>.t1{
+  display: block;
+}
+#r2:checked ~  .slides>.t2 {
   transition: all 2.6s ease;
   display: block;
 }
-#r3:checked ~ .s1 {
+#r3:checked ~ .slides>.s1 {
   margin-left: -50%;
 }
-#r3:checked ~ .t3 {
+#r3:checked ~ .slides>.t3 {
   transition: all 2.6s ease;
   display: block;
 }
-#r4:checked ~ .s1 {
+#r4:checked ~ .slides>.s1 {
   margin-left: -75%;
 }
-#r4:checked ~ .t4 {
+#r4:checked ~ .slides>.t4 {
   transition: all 2.6s ease;
   display: block;
 }
@@ -234,7 +252,7 @@ input[name="r"] {
   .middle {
     margin-top: 50%;
   }
-
+}
 @media(max-width: 490px) {
   .middle {
     margin-top: 60%;
@@ -268,7 +286,6 @@ input[name="r"] {
     margin-top: 11rem;
   }
 }
-
 
 @media(max-width: 320px) {
   .middle {
