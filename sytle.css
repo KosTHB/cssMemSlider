@@ -2,14 +2,12 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   background-color: black;
   overflow-y: hidden;
 }
-
 h2 {
-  font-size: 30px;
+  font-size: 3.8vh;
 }
 
 .slider {
@@ -17,7 +15,7 @@ h2 {
   min-width: 70%;
   min-width: none;
   overflow: hidden;
-  border: 5px solid white;
+  border: 1vh solid white;
 }
 
 .middle {
@@ -51,8 +49,16 @@ h2 {
   display: none;
   transition: all .6s ease;
   margin-top: 40vw;
+  animation: move 1s ease-in-out;
 }
-
+@keyframes move {
+  0% {
+    opacity: 0.0;
+  }
+  100% {
+    opacity: 1.0;
+  }
+}
 .bar {
   height: 3rem;
   width: 3rem;
@@ -62,17 +68,15 @@ h2 {
   border-radius: 50%;
   transition: all .6s ease;
 }
-
 .bar:hover .into {
   transition: all .4s ease;
   background-color: red;
   transform: scale(1.5);
 }
-
 .into {
-  height: 15px;
-  width: 15px;
-  margin: 17px;
+  height: 2vh;
+  width: 2vh;
+  margin: 2.6vh;
   cursor: pointer;
   background-color: white;
   opacity: 0.5;
@@ -100,40 +104,57 @@ input[name="r"] {
   width: 100%;
   height: 100%;
 }
-
-#r1:checked ~ .s1 {
-  margin-left: 3px;
+#r1:checked~.navigation_block>.navigation>label[for="r1"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
 }
-#r1:checked ~ .t1{
-  transition: all 0.6s ease;
-  display: block;
-
+#r2:checked~.navigation_block>.navigation>label[for="r2"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
 }
-#r2:checked ~ .s1 {
+#r3:checked~.navigation_block>.navigation>label[for="r3"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+#r4:checked~.navigation_block>.navigation>label[for="r4"] .into {
+  transition: all .4s ease;
+  background-color: red;
+  transform: scale(1.5);
+}
+#r1:checked ~ .slides>.s1 {
+  margin-left: 0.5vh;
+}
+#r2:checked ~ .slides>.s1 {
   margin-left: -25%;
 }
-#r2:checked ~  .t2 {
-  transition: all 0.6s ease;
+#r1:checked ~ .slides>.t1{
   display: block;
 }
-#r3:checked ~ .s1 {
+#r2:checked ~  .slides>.t2 {
+  transition: all 2.6s ease;
+  display: block;
+}
+#r3:checked ~ .slides>.s1 {
   margin-left: -50%;
 }
-#r3:checked ~ .t3 {
-  transition: all 0.6s ease;
+#r3:checked ~ .slides>.t3 {
+  transition: all 2.6s ease;
   display: block;
 }
-#r4:checked ~ .s1 {
+#r4:checked ~ .slides>.s1 {
   margin-left: -75%;
 }
-#r4:checked ~ .t4 {
-  transition: all 0.6s ease;
+#r4:checked ~ .slides>.t4 {
+  transition: all 2.6s ease;
   display: block;
 }
 
 @media(max-width: 1280px) {
   .middle {
-    margin-top: 32%;
+    margin-top: 25.6%;
   }
   .text {
     margin-left: 1rem;
@@ -144,10 +165,13 @@ input[name="r"] {
 @media(max-width: 1202px) {
   .text {
     margin-left: 1rem;
-    max-width: 25rem;
+    max-width: 30rem;
   }
   .navigation {
     margin-left: 47vw;
+  }
+  .middle {
+    margin-top: 27.6%;
   }
 }
 
@@ -166,7 +190,7 @@ input[name="r"] {
     margin-top: 40%;
   }
   .navigation_block {
-    height: 180px;
+    height: 23vh;
   }
   .text {
     margin-left: 6%;
@@ -179,9 +203,17 @@ input[name="r"] {
   }
 }
 
+@media(max-width: 887px) {
+  .text {
+    margin-top: 24rem;
+    font-size: 4vh;
+  }
+}
+
 @media(max-width: 737px) {
   .text {
     margin-top: 20rem;
+    margin-left: 2rem;
   }
   .navigation {
     margin-top: -2rem;
@@ -191,7 +223,7 @@ input[name="r"] {
 
 @media(max-width: 703px) {
   .middle {
-    margin-top: 50%;
+    margin-top: 40%;
   }
   .navigation {
     margin-left: 25%;
@@ -200,66 +232,72 @@ input[name="r"] {
     margin-left: 10%;
   }
   .navigation_block {
-    height: 300px;
+    height: 30vh;
   }
 }
 
-@media(max-width: 540px) {
+@media(max-width: 646px) {
   .middle {
-    margin-top: 60%;
+    margin-top: 40%;
   }
   .navigation {
-    margin-left: 18%;
+    margin-left: 25%;
   }
+  .text {
+    margin-top: 70%;
+  }
+}
 
 @media(max-width: 596px) {
   .middle {
-    margin-top: 60%;
+    margin-top: 50%;
   }
-
+}
 @media(max-width: 490px) {
   .middle {
-    margin-top: 80%;
+    margin-top: 60%;
   }
   .navigation {
     margin-left: 10%;
   }
   .text {
     margin-left: 6%;
-    margin-top: 18rem;
+    margin-top: 15rem;
+    font-size: 4vh;
   }
 }
 
 @media(max-width: 427px) {
   .text {
-    margin-top: 14rem;
+    margin-top: 13rem;
+    font-size: 3vh;
   }
 }
 
 @media(max-width: 344px) {
   .middle {
-    margin-top: 100%;
+    margin-top: 80%;
+  }
+  .navigation {
+    margin-left: 5%;
+  }
+  .text {
+    margin-left: 10%;
+    margin-top: 11rem;
+  }
+}
+
+@media(max-width: 320px) {
+  .middle {
+    margin-top: 80%;
   }
   .navigation {
     margin-left: 0%;
   }
   .text {
-    margin-left: 6%;
-    margin-top: 11rem;
-  }
-}
-
-
-@media(max-width: 317px) {
-  .middle {
-    margin-top: 80%;
-  }
-  .navigation {
-    margin-left: -10%;
-  }
-  .text {
+    width: 11rem;
     margin-left: 10%;
-    margin-top: 12rem;
-    font-size: 20px;
+    margin-top: 11rem;
+    font-size: 1rem;
   }
 }
